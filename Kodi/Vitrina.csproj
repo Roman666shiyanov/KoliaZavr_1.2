@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF08BCBB-BE18-47E3-AE3C-FE57579D6EEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vitrina</RootNamespace>
+    <AssemblyName>Vitrina</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Golova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Golova.Designer.cs">
+      <DependentUpon>Golova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GolovaBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GolovaBD.Designer.cs">
+      <DependentUpon>GolovaBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kostumi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kostumi.Designer.cs">
+      <DependentUpon>Kostumi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KostumiBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KostumiBD.Designer.cs">
+      <DependentUpon>KostumiBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kurtki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kurtki.Designer.cs">
+      <DependentUpon>Kurtki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KurtkiBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KurtkiBD.Designer.cs">
+      <DependentUpon>KurtkiBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obuv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="obuv.Designer.cs">
+      <DependentUpon>obuv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obuvBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="obuvBD.Designer.cs">
+      <DependentUpon>obuvBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="shtani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shtani.Designer.cs">
+      <DependentUpon>shtani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shtaniBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shtaniBD.Designer.cs">
+      <DependentUpon>shtaniBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vibor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vibor.Designer.cs">
+      <DependentUpon>Vibor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Golova.resx">
+      <DependentUpon>Golova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GolovaBD.resx">
+      <DependentUpon>GolovaBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kostumi.resx">
+      <DependentUpon>Kostumi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KostumiBD.resx">
+      <DependentUpon>KostumiBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kurtki.resx">
+      <DependentUpon>Kurtki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KurtkiBD.resx">
+      <DependentUpon>KurtkiBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obuv.resx">
+      <DependentUpon>obuv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obuvBD.resx">
+      <DependentUpon>obuvBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shtani.resx">
+      <DependentUpon>shtani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shtaniBD.resx">
+      <DependentUpon>shtaniBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vibor.resx">
+      <DependentUpon>Vibor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DIZAYN-77_KAMUFLYaZh-1.200x0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qwe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camouflage_colour_by_Tanoware.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anypics.ru-20091.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\о1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\o10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш6.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш8.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ш10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i11.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\I11.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
