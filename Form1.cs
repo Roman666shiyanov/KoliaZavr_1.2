@@ -71,6 +71,7 @@ namespace Витрина
             command.ExecuteNonQuery();
             MessageBox.Show("Название изменено на" + textBox3.Text);
             this.обувьTableAdapter3.Fill(this.ewrwDataSet.Обувь);
+            Log.Logger("Название было изменено");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -113,6 +114,7 @@ namespace Витрина
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные удалены");
+            Log.Logger("Данные были удалены");
             
 
         }
@@ -125,6 +127,7 @@ namespace Витрина
             command.ExecuteNonQuery();
             MessageBox.Show("Паспортные данные изменены на  " + textBox1.Text);
             this.головные_уборыTableAdapter3.Fill(this.ewrwDataSet1.Головные_уборы);
+              Log.Logger("Данные были изменены");
 
         }
 
@@ -135,6 +138,7 @@ namespace Витрина
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные удалены");
+              Log.Logger("Данные были удалены");
             
         }
 
@@ -146,6 +150,7 @@ namespace Витрина
             command.ExecuteNonQuery();
             MessageBox.Show("Количество изменено " + textBox2.Text);
             this.обувьTableAdapter3.Fill(this.ewrwDataSet1.Обувь);
+              Log.Logger("Количество обуви было изменено");
 
         }
 
@@ -156,6 +161,7 @@ namespace Витрина
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.ExecuteNonQuery();
             MessageBox.Show("Данные удалены");
+              Log.Logger("Данные были удалены");
             
         }
 
@@ -272,6 +278,56 @@ namespace Витрина
             var data = times.Select((v, i) => new { index = i, value = v }).ToList();
 
             dataGridView1.DataSource = data;
+        }
+        // запись в файл
+         private void button23_Click(object sender, EventArgs e)
+        {
+        FileStream fs = new FileStream(@"C:\1.txt", FileMode.Create);
+                        StreamWriter streamWriter = new StreamWriter(fs);
+ 
+                        try
+                        {
+                            for (int j = 0; j < dataBase.Rows.Count; j++)
+                            {
+                                for (int i = 0; i < dataBase.Rows[j].Cells.Count; i++)
+                                {
+                                    streamWriter.Write(dataBase.Rows[j].Cells[i].Value + "     ");
+                                }
+ 
+                                streamWriter.WriteLine();
+                            }
+ 
+                            streamWriter.Close();
+                            fs.Close();
+ 
+                            MessageBox.Show("Файл успешно сохранен");
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Ошибка при сохранении файла!");
+                        }
+                        }
+                        // чтение из файла
+         private void button23_Click(object sender, EventArgs e)
+        {
+        StreamReader rd = new StreamReader(@"C:\EE.txt", Encoding.GetEncoding(1251));
+            DataSet ds = new DataSet();
+            ds.Tables.Add("Score");
+            string header = rd.ReadLine();
+            string[] col = System.Text.RegularExpressions.Regex.Split(header, ",");
+            for (int c = 0; c < col.Length; c++)
+            {
+                ds.Tables[0].Columns.Add(col[c]);
+            }
+            string row = rd.ReadLine();
+            while (row != null)
+            {
+                string[] rvalue = System.Text.RegularExpressions.Regex.Split(row, ",");
+                ds.Tables[0].Rows.Add(rvalue);
+                row = rd.ReadLine();
+            }
+            dataGridView1.DataSource = ds.Tables[0];
+        }
         }
     }
 
